@@ -1,7 +1,8 @@
 # 301-Lab02
+
 jQuery Selectors &amp; Events
 
-Contributors: Chase McFaddin & 
+## Contributors: Chase McFaddin & 
 
 We will be using jQuery selectors and events to displaym filter and style images on our page
 
