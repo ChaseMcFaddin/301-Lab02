@@ -2,7 +2,7 @@
 
 jQuery Selectors &amp; Events
 
-## Contributors: Chase McFaddin & 
+## Contributors: Chase McFaddin & Karlo Mangubat
 
 We will be using jQuery selectors and events to displaym filter and style images on our page
 
@@ -10,7 +10,7 @@ We will be using jQuery selectors and events to displaym filter and style images
 - DISPLAYING IMAGES
 
 Estimate of time needed to complete: 2 hours
-Start time: 8:30pm 9/30/20
+Start time: 9:00pm 9/30/20
 Finish time: 0:00pm
 Actual time needed to complete:
 
