@@ -17,7 +17,7 @@ Actual time needed to complete: 2 hours
 - FILTERING IMAGES
 
 Estimate of time needed to complete: 2 hours
-Start time: 0:00p.m.
+Start time: 8:20 p.m. 10/01/20
 Finish time:0:00p.m.
 Actual time needed to complete:
 
