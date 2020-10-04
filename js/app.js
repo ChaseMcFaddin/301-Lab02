@@ -6,9 +6,9 @@ $.ajax('../data/page-1.json').then(data => {
   data.forEach(img => {
     new HornedAnimal(img).render();
   });
-  newArray();
-  populateDropDown();
-  userInput();
+  // newArray();
+  // populateDropDown();
+  // userInput();
 });
 
 // ------------------ Generating HTML Elements ------------------ //
@@ -19,9 +19,9 @@ $.ajax('../data/page-1.json').then(data => {
 
 // ------------------ Global Variables ------------------ //
 let hornsArray = [];
-let hornsArray2 = [];
+// let hornsArray2 = [];
 let keywordArray = [];
-let keywordArray2 = [];
+// let keywordArray2 = [];
 
 // ------------------ Constructor Function ------------------ //
 function HornedAnimal(image_url, title, description, keyword, horns) {
@@ -73,10 +73,10 @@ let userInput = () => {
   });
 };
 
-console.log(hornsArray);
-console.log(hornsArray2);
-console.log(keywordArray);
-console.log(keywordArray2);
+// console.log(hornsArray);
+// console.log(hornsArray2);
+// console.log(keywordArray);
+// console.log(keywordArray2);
 
 
 // $.ajax('../data/page-1.json').then(data => {
