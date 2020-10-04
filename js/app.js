@@ -3,8 +3,9 @@
 // ------------------ Pagination/Ajax ------------------ //
 
 $.ajax('../data/page-1.json').then(data => {
-  data.forEach(img => {
-    new HornedAnimal(img).render();
+  console.log(data);
+  data.forEach(imgObject => {
+    new HornedAnimal(imgObject.image_url, imgObject.title, imgObject.description, imgObject.keyword, imgObject.horns).render();
   });
   // newArray();
   // populateDropDown();
@@ -35,6 +36,7 @@ function HornedAnimal(image_url, title, description, keyword, horns) {
 
 HornedAnimal.prototype.render = function () {
   let section = $('#photo-template').clone();
+  $('#photo-container').append(section);
   section.find('h2').text(this.title);
   section.find('img').attr('src', this.image_url);
   section.find('p').text(this.description);
@@ -43,14 +45,14 @@ HornedAnimal.prototype.render = function () {
 };
 
 const newArray = () => {
-  keywordArray.forEach($HornedAnimal => {
-    if (!keywordArray.includes($HornedAnimal.keyword)) {
-      keywordArray.push($HornedAnimal.keyword);
+  keywordArray.forEach(imgObject => {
+    if (!keywordArray.includes(HornedAnimal.keyword)) {
+      keywordArray.push(HornedAnimal.keyword);
     }
   });
 };
 
-const populateDropDown = () => {
+function populateDropDown(){
   const $dropdown = $('select');
   keywordArray.forEach(keywords => {
     console.log(keywords);
@@ -73,10 +75,12 @@ let userInput = () => {
   });
 };
 
-// console.log(hornsArray);
-// console.log(hornsArray2);
-// console.log(keywordArray);
-// console.log(keywordArray2);
+console.log(hornsArray);
+console.log(hornsArray2);
+console.log(keywordArray);
+console.log(keywordArray2);
+console.log(newArray(keyword));
+
 
 
 // $.ajax('../data/page-1.json').then(data => {
@@ -88,7 +92,7 @@ let userInput = () => {
 //     let $newAnimal = $template.clone();
 //     $newAnimal.attr('class', hornedAnimalObj.keyword);
 //     $newAnimal.find('h2').text(hornedAnimalObj.title);
-//     $newAnimal.find('img').attr('src', hornedAnimalObj.image_url);
+//     $newAnimal.find('imgObject').attr('src', hornedAnimalObj.image_url);
 //     $newAnimal.find('p').text(hornedAnimalObj.description);
 //     if (keyword.arr.indexOf(hornedAnimalObj.key) === -1){
 //       keyword.push(hornedAnimalObj.key);
@@ -133,7 +137,7 @@ let userInput = () => {
 
 // How are we implementing it?
 
-// Create the appropriate Mustache template in your HTML with the same <h2>, <img>, and <p> elements as the jQuery template from the prior lab.
+// Create the appropriate Mustache template in your HTML with the same <h2>, <imgObject>, and <p> elements as the jQuery template from the prior lab.
 
 // Refactor the method that renders your images to use Mustache instead of making a copy with jQuery.
 
