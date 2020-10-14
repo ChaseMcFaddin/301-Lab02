@@ -18,12 +18,12 @@ We will be using jQuery selectors and events to display filter and style images 
 
 - Estimate of time needed to complete: 2 hours
 - Start time: 8:20 p.m. 10/01/20
-- Finish time: 0:00p.m.
-- Actual time needed to complete:
+- Finish time: 18:00 p.m. 10/12/20
+- Actual time needed to complete: 4 hours
 
 #### STYLING IMAGES
 
 - Estimate of time needed to complete: 2 hrs
-- Start time: 0:00p.m.
-- Finish time: 0:00p.m.
-- Actual time needed to complete:
+- Start time: 8:20 p.m. 10/01/20
+- Finish time: 18:00 p.m. 10/12/20
+- Actual time needed to complete: 1
