@@ -1,0 +1,32 @@
+* {
+  font-family: 'Architects Daughter', cursive;
+}
+  
+body{
+  margin: 50px auto;
+  text-align: center;
+  background-color: lightgray;
+}
+
+img {
+  width: 150px;
+  padding: 5px;
+}
+
+p {
+  word-wrap: normal;
+}
+
+h1 {
+  font-family: 'Architects Daughter', cursive;
+  font-weight: bolder;
+  padding: 15px;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: 'Architects Daughter', cursive;
+  font-weight: bolder;
+  padding: 15px;
+  font-size: 30px;
+}

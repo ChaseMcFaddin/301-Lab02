@@ -7,9 +7,10 @@ $.ajax('../data/page-1.json').then(data => {
   data.forEach(imgObject => {
     new HornedAnimal(imgObject.image_url, imgObject.title, imgObject.description, imgObject.keyword, imgObject.horns).render();
   });
-  // newArray();
-  // populateDropDown();
-  // userInput();
+  newArray(data);
+  console.log(keywordArray);
+  populateDropDown();
+  userInput();
 });
 
 // ------------------ Generating HTML Elements ------------------ //
@@ -40,14 +41,15 @@ HornedAnimal.prototype.render = function () {
   section.find('h2').text(this.title);
   section.find('img').attr('src', this.image_url);
   section.find('p').text(this.description);
+  section.addClass(this.keyword);
 
   return section;
 };
 
-const newArray = () => {
-  keywordArray.forEach(imgObject => {
-    if (!keywordArray.includes(HornedAnimal.keyword)) {
-      keywordArray.push(HornedAnimal.keyword);
+const newArray = (data) => {
+  data.forEach(imgObject => {
+    if (!keywordArray.includes(imgObject.keyword)) {
+      keywordArray.push(imgObject.keyword);
     }
   });
 };
@@ -56,10 +58,11 @@ function populateDropDown(){
   const $dropdown = $('select');
   keywordArray.forEach(keywords => {
     console.log(keywords);
-    const $newDropdown = $(`<option value = '${keywords}'>${keywords}</option>`);
-    $dropdown.append($newDropdown);
+    const $newOption = $(`<option value = '${keywords}'>${keywords}</option>`);
+    $dropdown.append($newOption);
   });
-};
+}
+
 
 let userInput = () => {
   $('select').on('change', function () {
@@ -69,40 +72,13 @@ let userInput = () => {
     hornsArray.forEach(image => {
       if (selected === image.keyword) {
         let keyword = selected;
+        console.log(keyword);
         $('.' + keyword).show();
       }
     });
   });
 };
 
-console.log(hornsArray);
-console.log(hornsArray2);
-console.log(keywordArray);
-console.log(keywordArray2);
-console.log(newArray(keyword));
-
-
-
-// $.ajax('../data/page-1.json').then(data => {
-
-//   data.forEach(HornedAnimal => {
-
-//     let hornedAnimalObj = new HornedAnimal(HornedAnimal.image_url, HornedAnimal.title, HornedAnimal.description, HornedAnimal.title, HornedAnimal.horns);
-
-//     let $newAnimal = $template.clone();
-//     $newAnimal.attr('class', hornedAnimalObj.keyword);
-//     $newAnimal.find('h2').text(hornedAnimalObj.title);
-//     $newAnimal.find('imgObject').attr('src', hornedAnimalObj.image_url);
-//     $newAnimal.find('p').text(hornedAnimalObj.description);
-//     if (keyword.arr.indexOf(hornedAnimalObj.key) === -1){
-//       keyword.push(hornedAnimalObj.key);
-//       $menu.append(
-//         $('<option></option>').text(hornedAnimalObj.key)
-//       )
-
-//     }
-//   });
-// });
 
 // ---------------- class demo -----------------
 
