@@ -27,17 +27,23 @@ $.ajax('../data/page-2.json').then(data => {
 let page = 1;
 
 $('#page-1').on('click', () => {
-  console.log('hello world');
+  // console.log('this is number 2');
+  $('#photo-container').empty();
+  // console.log(hornsArray2);
+  hornsArray.forEach(value => {
+    value.render();
+  });
 });
 
 $('#page-2').on('click', () => {
   // console.log('this is number 2');
   $('#photo-container').empty();
-  console.log(hornsArray2);
+  // console.log(hornsArray2);
   hornsArray2.forEach(value => {
     value.render();
   });
 });
+
 
 // ------------------ Generating HTML Elements ------------------ //
 
@@ -109,6 +115,7 @@ let userInput = () => {
     });
   });
 };
+
 
 
 // ---------------- class demo -----------------
