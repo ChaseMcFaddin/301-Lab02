@@ -11,6 +11,9 @@ $.ajax('../data/page-1.json').then(data => {
   console.log(keywordArray);
   populateDropDown(keywordArray);
   userInput();
+  let $photoTemplate = $('#photo-template').html();
+  let rendered = Mustache.render($photoTemplate, hornsArray);
+  // $('#photo-container').append(rendered);
 });
 
 $.ajax('../data/page-2.json').then(data => {
@@ -82,6 +85,16 @@ HornedAnimal.prototype.render = function () {
 
   return section;
 };
+
+//Mustache Rendering
+// function photoContainer(arr){
+//   let $template = $('#template').html();
+//   $('#photo-container').html();
+//   arr.forEach(value => {
+//     let photo = Mustache.render($template, value);
+//     $('#photo-container').append(photo);
+//   });
+// }
 
 const newArray = (data, targetArray) => {
   data.forEach(imgObject => {
